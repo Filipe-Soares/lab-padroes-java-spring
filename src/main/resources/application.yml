@@ -1,0 +1,23 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /lab-padroes
+spring:
+  application:
+    name: lab-padroes-projeto-spring-via-cep
+    
+  datasource:
+    url: jdbc:postgresql://localhost/labpadroes
+    username: postgres
+    password: ${PASSWORD_DB}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 3
+  jpa:
+    show_sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
